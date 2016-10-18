@@ -20,7 +20,7 @@ esDocType = ''
 mysqlDb = ''
 
 #Queries
-queryUser = '';
+queryData = '';
 queryProdutcts = '';
 
 #Connection MySql
@@ -40,17 +40,17 @@ es = Elasticsearch([esHost])
 
 #Create Json with querie's Sata 
 userProduts = []
-for user in cur.fetchall():
-    cur.execute(queryProdutcts + str(user['id']))
+for data in cur.fetchall():
+    cur.execute(queryProdutcts + str(data['id']))
 
     for produtct in cur.fetchall():
         userProduts.append(produtct);
     
-    user['produto'] = userProduts
+    data['produto'] = userProduts
     userProduts = []
 
     #Insert into ElasticSearch
-    res = es.index(index=esIndex, doc_type=esDocType, body=json.dumps(user))
+    res = es.index(index=esIndex, doc_type=esDocType, body=json.dumps(data))
     print(res['created'])
 
 db.close()
