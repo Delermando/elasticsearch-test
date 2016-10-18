@@ -2,6 +2,9 @@ elasticsearch:
   image: elasticsearch:2.4
   ports:
   - 9200:9200
+  expose:
+  - 5601
   container_name: elasticsearch
   volumes:
+    - ./../../../../infra/config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     - ./../../../../volumes/elasticsearch:/usr/share/elasticsearch/data
