@@ -1,0 +1,97 @@
+## Yii
+
+volumes/elasticsearch/*
+volumes/mysql/*
+
+!assets/.gitignore
+**/runtime/*
+!**/runtime/.gitignore
+**/data/*.db
+node_modules
+temporary-app
+# themes/classic/views/
+
+## Yiihetc
+app/yiihoroscopoetc/assets/*
+!app/yiihoroscopoetc/assets/.gitignore
+
+## Admin
+app/admin/assets/*
+!app/admin/assets/.gitignore
+
+## NEF
+**/nef/**/Logs/*
+!**/nef/**/Logs/.gitignore
+
+##AngularJS
+angularjs/temporary-app
+
+## PHP Composer
+composer.lock
+composer.phar
+vendor/
+!app/yii/vendor/
+
+## PHPStorm
+#ignorando arquivos de projeto do phpstorm
+.idea/
+
+## Eclipse files
+.buildpath
+.project
+.settings/
+
+## Sublime Text
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+.DS_Store
+*.swp
+*.out
+*.log
+*_log.*
+*.svn
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.bz
+*.bz2
+*.tbz
+*.tbz2
+*.tar.gz
+*.tar.bz
+*.tar.bz2
+*.DS_Store
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Build
+build/.awspublish*
+build/tmp/
+build/tpl
+build/aws-credentials*
+.v8flags*
