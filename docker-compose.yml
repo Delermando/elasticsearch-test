@@ -2,12 +2,10 @@ elasticsearch:
   extends:
     file: ./infra/docker/composer/elasticsearch/elasticsearch.yml
     service: elasticsearch
-
 mysql:
   extends:
     file: ./infra/docker/composer/mysql/mysql.yml
     service: mysql
-
 python:
   extends:
     file: ./infra/docker/composer/python/python.yml

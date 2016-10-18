@@ -7,8 +7,19 @@ kill:
 rm: kill
 	docker-compose rm -f
 
+restart: rm up
+
 dev: up
 	docker exec -it python /bin/bash
 
-kibana:
-	docker run --name kibana -e ELASTICSEARCH_URL=http://172.17.0.1:9200 -p 5601:5601 -d kibana
+
+kibana-up:
+	docker-compose -f infra/docker/composer/kibana/kibana.yml up -d
+
+kibana-kill:
+	docker-compose -f infra/docker/composer/kibana/kibana.yml kill
+
+kibana-rm: kibana-kill
+	docker-compose -f infra/docker/composer/kibana/kibana.yml rm -f
+
+kibana-restart: kibana-rm kibana-up
