@@ -1,0 +1,7 @@
+elasticsearch:
+  image: elasticsearch:2.4
+  ports:
+  - 9200:9200
+  container_name: elasticsearch
+  volumes:
+    - ./../../../../volumes/elasticsearch:/usr/share/elasticsearch/data

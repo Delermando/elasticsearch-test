@@ -1,0 +1,5 @@
+python:
+    build: ./../../images
+    container_name: python
+    volumes:
+    - ./../../../../src:/src
