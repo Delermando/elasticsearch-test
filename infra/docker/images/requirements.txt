@@ -1,4 +1,4 @@
 elasticsearch==2.4.0
 MySQL-python==1.2.5
-urllib3==1.18
+urllib3==1.26.5
 virtualenv==15.0.3
